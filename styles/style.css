@@ -18,7 +18,7 @@ body {
 body {
   min-height: 100vh;
   background: linear-gradient(180deg, rgba(248, 83, 83, 0.7), rgba(190, 44, 171, 0.4));
-  padding-bottom: 50rem;
+  overflow-y: hidden;
 }
 
 #title {
