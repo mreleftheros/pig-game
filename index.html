@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pig Game</title>
+  <link rel="shortcut icon" href="#">
+  <script src="https://kit.fontawesome.com/beb53b0a86.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <h1 id="title">Pig Game</h1>
+  <div id="wrapper">
+
+    <div id="players">
+      <div id="player-1" class="player">
+        <div class="player-name">Player 1</div>
+        <div class="player-score-0">0</div>
+        <div class="player-current">
+          <div class="current-label">Current</div>
+          <div class="current-score-0">0</div>
+        </div>
+      </div>
+      <div id="player-2" class="player">
+        <div class="player-name">Player 2</div>
+        <div class="player-score-1">0</div>
+        <div class="player-current">
+          <div class="current-label">Current</div>
+          <div class="current-score-1">0</div>
+        </div>
+      </div>
+    </div>
+
+    <img src="./assets/dice-1.png" alt="dice" class="dice">
+
+    <div class="buttons">
+      <button id="btn-roll" class="btn btn-play">
+        <i class="fas fa-dice"></i>
+        <span>Roll</span> 
+      </button>
+      <button id="btn-hold" class="btn btn-play">
+        <i class="fas fa-hand-paper"></i>
+        <span>Hold</span>
+      </button>
+      <button id="btn-new" class="btn">
+        <i class="fas fa-gamepad"></i>
+        <span>New Game</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="/scripts/app.js"></script>
+</body>
+</html>
