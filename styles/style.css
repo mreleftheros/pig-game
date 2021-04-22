@@ -129,4 +129,8 @@ body {
 
 .active {
   opacity: 1 !important;
+}
+
+.hidden {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

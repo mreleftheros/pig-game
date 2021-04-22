@@ -123,5 +123,9 @@ body {
 }
 
 .active {
-  opacity: 1!important;
+  opacity: 1 !important;
+}
+
+.hidden {
+  display: none !important;
 }

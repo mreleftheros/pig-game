@@ -2,20 +2,25 @@ let scores, activePlayer, currentScore, isPlaying = false;
 const rollBtn = document.getElementById("btn-roll");
 const holdBtn = document.getElementById("btn-hold");
 const newBtn = document.getElementById("btn-new");
-const diceImg = document.querySelector(".dice");
+const diceElement = document.querySelector(".dice");
 
-const init = () => {
-  currentScore = 0;
-  scores = [0, 0];
-  isPlaying = true;
-  activePlayer = Math.floor(Math.random() * 2);
+const resetUI = () => {
   document.querySelector(".player-score-0").textContent = scores[0];
   document.querySelector(".player-score-1").textContent = scores[1];
   document.querySelector(".current-score-0").textContent = currentScore;
   document.querySelector(".current-score-1").textContent = currentScore;
   document.getElementById("player-1").classList.remove("active");
   document.getElementById("player-2").classList.remove("active");
+  diceElement.classList.add("hidden");
   document.getElementById("player-" + (activePlayer + 1)).classList.add("active");
+};
+
+const init = () => {
+  currentScore = 0;
+  scores = [0, 0];
+  isPlaying = true;
+  activePlayer = Math.floor(Math.random() * 2);
+  resetUI();
 };
 
 const changeTurn = () => {
@@ -33,7 +38,8 @@ window.addEventListener("DOMContentLoaded", () => {
 rollBtn.addEventListener("click", () => {
   if (isPlaying) {
     let dice = Math.floor(Math.random() * 6) + 1;
-    diceImg.src = "assets/dice-" + dice + ".png";
+    diceElement.src = "assets/dice-" + dice + ".png";
+    diceElement.classList.remove("hidden");
     
     if(dice !== 1) {
       currentScore += dice;
